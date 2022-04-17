@@ -1,0 +1,9 @@
+[Unit]
+Description=WoL Enable
+After=multi-user.target
+[Service]
+Type=idle
+ExecStart=path to script/WoL_Enable.sh
+[Install]
+WantedBy=multi-user.target
+
