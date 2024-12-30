@@ -16,3 +16,8 @@ ___
 ```sh
     sudo bash -c "$(wget -qLO - https://raw.githubusercontent.com/dima101097/linux/refs/heads/main/FileBrowser.bash)"
  ```   
+___
+- [FileBrowser](https://github.com/dima101097/linux/blob/main/iventoy.bash) - Скрипт для автовстановлення iVentoy PXE. 
+```sh
+    sudo bash -c "$(wget -qLO - https://raw.githubusercontent.com/dima101097/linux/refs/heads/main/iventoy.bash)"
+ ```   
