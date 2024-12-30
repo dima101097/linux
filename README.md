@@ -12,7 +12,7 @@ ___
     bash -c "$(wget -qLO - https://raw.githubusercontent.com/dima101097/linux/refs/heads/main/adduser.bash)"
  ```
 ___
-- [Add user](https://github.com/dima101097/linux/blob/main/FileBrouser.bash) - Скрипт для автовстановлення FileBrouser. 
+- [FileBrowser](https://github.com/dima101097/linux/blob/main/FileBrowser.bash) - Скрипт для автовстановлення FileBrowser. 
 ```sh
     sudo bash -c "$(wget -qLO - https://raw.githubusercontent.com/dima101097/linux/refs/heads/main/FileBrouser.bas)"
  ```   
