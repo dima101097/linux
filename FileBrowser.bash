@@ -44,7 +44,7 @@ if [ -f "$config" ]; then
     fi
 fi
 
-echo -e "port: 8080\naddress: 0.0.0.0\nroot: /path/to/your/file\ndatabase: /etc/filebrowser/filebrowser.db" > "$config"
+echo -e "port: 8080\naddress: 0.0.0.0\nroot: / #path/to/your/file\ndatabase: /etc/filebrowser/filebrowser.db" > "$config"
 echo "Creation successful."
 
 echo "Create filebrowser.service"
