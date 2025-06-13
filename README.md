@@ -7,7 +7,7 @@
     Віиконати sudo systemctl enable wol_enable.service 
  ```
 ___
-- [WoL Enable Service](https://github.com/dima101097/linux/tree/main/Silent_minute) - Скрипт відтворення хвилини мовчання. Для автоматичного відтворення в 9 ранку щодня неодхідно в crontab додати 
+- [Silent minute](https://github.com/dima101097/linux/tree/main/Silent_minute) - Скрипт відтворення хвилини мовчання. Для автоматичного відтворення в 9 ранку щодня неодхідно в crontab додати 
 ```sh
     0 9 * * * /.../Start.bash >> /dev/null
 
