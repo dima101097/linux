@@ -7,6 +7,12 @@
     Віиконати sudo systemctl enable wol_enable.service 
  ```
 ___
+- [WoL Enable Service](https://github.com/dima101097/linux/tree/main/Silent_minute) - Скрипт відтворення хвилини мовчання. Для автоматичного відтворення в 9 ранку щодня неодхідно в crontab додати 
+```sh
+    0 9 * * * /.../Start.bash >> /dev/null
+
+ ```
+___
 - [Add user](https://github.com/dima101097/linux/blob/main/adduser.bash) - Скрипт для спрощення рутинних дій, створює нового користувача, дає права використання sudo, та для безпеки деактивовує root користувача.
 ```sh
     bash -c "$(wget -qLO - https://raw.githubusercontent.com/dima101097/linux/refs/heads/main/adduser.bash)"
@@ -21,3 +27,8 @@ ___
 ```sh
     sudo bash -c "$(wget -qLO - https://raw.githubusercontent.com/dima101097/linux/refs/heads/main/iventoy.bash)"
  ```   
+
+
+
+
+
