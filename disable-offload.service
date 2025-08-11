@@ -1,0 +1,9 @@
+[Unit]
+Description=Disable network intedface offloading
+After=network.target
+[Service]
+Type=oneshot
+ExecStat=/sbin/ethtool -K enp0s25 tx off rx off tso off gso off gro off lro off
+RemainAfterExit=yes
+[Install]
+WantedBy=multi-user.target
