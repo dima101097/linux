@@ -28,7 +28,8 @@ ___
     sudo bash -c "$(wget -qLO - https://raw.githubusercontent.com/dima101097/linux/refs/heads/main/iventoy.bash)"
  ```   
  ___
-- [disable-offload.service](https://github.com/dima101097/linux/blob/main/disable-offload.service) - На моєму Intel NUC інколи виникає проблема з мережевим інтерфейсом, наступний сервіс вимикає прискорення тимсамим проблема вирішується.
+- [disable-offload.service](https://github.com/dima101097/linux/blob/main/disable-offload.service) - На моєму Intel NUC інколи виникає проблема з мережевим інтерфейсом, наступний сервіс вимикає прискорення тимсамим проблема вирішується. В сервісі необхідно змінити імя інтерфейса.
+Вивод команди dmesg
 ```sh
      Detected Hardware Unit Hang:
                    TDH                  <b7>
