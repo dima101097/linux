@@ -29,7 +29,13 @@ ___
  ```   
  ___
 - [disable-offload.service](https://github.com/dima101097/linux/blob/main/disable-offload.service) - На моєму Intel NUC інколи виникає проблема з мережевим інтерфейсом, наступний сервіс вимикає прискорення тимсамим проблема вирішується. В сервісі необхідно змінити імя інтерфейса.
-Вивод команди dmesg
+Запуск сервісу
+```sh
+sudo systemctl daemon-reload
+sudo systemctl enable disable-offload
+```
+
+Вивод команди dmesg з помилкою
 ```sh
      Detected Hardware Unit Hang:
                    TDH                  <b7>
