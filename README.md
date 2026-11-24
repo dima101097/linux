@@ -2,12 +2,12 @@
 
 - [WoL Enable Service](https://github.com/dima101097/linux/tree/main/WoL_Enable) - Служба автоматично вмикає WoL в linux після увімкнення. Потрібно в випадку якщо самостійно це не відбувається 
 ```sh
-    Зберігти WoL_Enable.sh в зручному місці, замінив ім'я інтрфейсу.
-    Створити сервіс wol_enable.service за шляхом /lib/systemd/system/ та вказатишлях до sh скрипта.
-    Віиконати sudo systemctl enable wol_enable.service 
+    Зберегти WoL_Enable.sh в зручному місці, замінивши ім'я інтерфейсу.
+    Створити сервіс wol_enable.service за шляхом /lib/systemd/system/ та вказати шлях до sh скрипта.
+    Виконати sudo systemctl enable wol_enable.service 
  ```
 ___
-- [Silent minute](https://github.com/dima101097/linux/tree/main/Silent_minute) - Скрипт відтворення хвилини мовчання. Для автоматичного відтворення в 9 ранку щодня неодхідно в crontab додати 
+- [Silent minute](https://github.com/dima101097/linux/tree/main/Silent_minute) - Скрипт відтворення хвилини мовчання. Для автоматичного відтворення в 9 ранку щодня необхідно в crontab додати 
 ```sh
     0 9 * * * /.../Start.bash >> /dev/null
 
@@ -27,15 +27,26 @@ ___
 ```sh
     sudo bash -c "$(wget -qLO - https://raw.githubusercontent.com/dima101097/linux/refs/heads/main/iventoy.bash)"
  ```   
- ___
-- [disable-offload.service](https://github.com/dima101097/linux/blob/main/disable-offload.service) - На моєму Intel NUC інколи виникає проблема з мережевим інтерфейсом, наступний сервіс вимикає прискорення тимсамим проблема вирішується. В сервісі необхідно змінити імя інтерфейса.
+___
+- [Telegram](https://github.com/dima101097/linux/blob/main/install-telegram.sh) - Скрипт встановлення Telegram Desktop з офіційного сайту, без snap та flatpak. Ставиться в домашню теку (~/.local/opt), без sudo, вбудоване автооновлення працює. Запускати **без sudo**.
+```sh
+    bash -c "$(wget -qLO - https://raw.githubusercontent.com/dima101097/linux/refs/heads/main/install-telegram.sh)"
+ ```
+___
+- [WinBox](https://github.com/dima101097/linux/blob/main/install-winbox.sh) - Скрипт встановлення MikroTik WinBox 4 (нативна Linux-версія) з офіційного сайту, з перевіркою SHA256. Після встановлення пропонує відкрити у фаєрволі (ufw / firewalld) порти UDP 5678 і 20561, без яких WinBox не бачить роутери у вкладці Neighbors. Запускати **без sudo**.
+```sh
+    bash -c "$(wget -qLO - https://raw.githubusercontent.com/dima101097/linux/refs/heads/main/install-winbox.sh)"
+ ```
+Додатково: `./install-winbox.sh --firewall` - лише додати правила фаєрвола, `./install-winbox.sh --remove` - видалити.
+___
+- [disable-offload.service](https://github.com/dima101097/linux/blob/main/disable-offload.service) - На моєму Intel NUC інколи виникає проблема з мережевим інтерфейсом, наступний сервіс вимикає прискорення, тим самим проблема вирішується. В сервісі необхідно змінити ім'я інтерфейсу.
 Запуск сервісу
 ```sh
 sudo systemctl daemon-reload
 sudo systemctl enable disable-offload
 ```
 
-Вивод команди dmesg з помилкою
+Вивід команди dmesg з помилкою
 ```sh
      Detected Hardware Unit Hang:
                    TDH                  <b7>
@@ -53,8 +64,3 @@ sudo systemctl enable disable-offload
                  PHY Extended Status    <3000>
                  PCI Status             <10>
  ```
-
-
-
-
-
